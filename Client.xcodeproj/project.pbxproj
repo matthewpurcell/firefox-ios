@@ -44,6 +44,7 @@
 		28B8101F1AB0E27F00FF4E02 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 28B810151AB0DE9200FF4E02 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28B810221AB0E28000FF4E02 /* Deferred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B80FF01AB0DE8E00FF4E02 /* Deferred.framework */; };
 		28B810231AB0E28000FF4E02 /* Deferred.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 28B80FF01AB0DE8E00FF4E02 /* Deferred.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		28BAAC051AB3FAC300511FCE /* LiveStorageClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BAAC041AB3FAC300511FCE /* LiveStorageClientTests.swift */; };
 		28C077981A3B064000834FE5 /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C077971A3B064000834FE5 /* CryptoTests.swift */; };
 		28C0779A1A3B064F00834FE5 /* FxAClient10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C077991A3B064F00834FE5 /* FxAClient10Tests.swift */; };
 		28C0779C1A3B065800834FE5 /* TokenServerClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C0779B1A3B065800834FE5 /* TokenServerClientTests.swift */; };
@@ -711,6 +712,7 @@
 		28786E541AB0F5FA009EA9EF /* DeferredTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeferredTests.swift; path = SyncTests/DeferredTests.swift; sourceTree = "<group>"; };
 		28B80FE01AB0DE8E00FF4E02 /* Deferred.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Deferred.xcodeproj; path = Carthage/Checkouts/Deferred/Deferred.xcodeproj; sourceTree = "<group>"; };
 		28B8100C1AB0DE9200FF4E02 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
+		28BAAC041AB3FAC300511FCE /* LiveStorageClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LiveStorageClientTests.swift; path = SyncTests/LiveStorageClientTests.swift; sourceTree = "<group>"; };
 		28C077971A3B064000834FE5 /* CryptoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
 		28C077991A3B064F00834FE5 /* FxAClient10Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FxAClient10Tests.swift; path = FxATests/FxAClient10Tests.swift; sourceTree = "<group>"; };
 		28C0779B1A3B065800834FE5 /* TokenServerClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenServerClientTests.swift; path = FxATests/TokenServerClientTests.swift; sourceTree = "<group>"; };
@@ -1008,6 +1010,7 @@
 				28786E541AB0F5FA009EA9EF /* DeferredTests.swift */,
 				2FEBABAE1AB3659000DB5728 /* ResultTests.swift */,
 				283307891AB3C1F8008999AC /* StorageClientTests.swift */,
+				28BAAC041AB3FAC300511FCE /* LiveStorageClientTests.swift */,
 			);
 			name = SyncTests;
 			sourceTree = "<group>";
@@ -2269,6 +2272,7 @@
 				2FEBABAF1AB3659000DB5728 /* ResultTests.swift in Sources */,
 				0BA8964C1A250E6500C1010C /* TestBookmarks.swift in Sources */,
 				2F998FD61AA516380063E75D /* FirefoxAccountConfiguration.swift in Sources */,
+				28BAAC051AB3FAC300511FCE /* LiveStorageClientTests.swift in Sources */,
 				D38B2D321A8D96D00040E6B5 /* GCDWebServerConnection.m in Sources */,
 				0BE108361A1B1EC700D4B712 /* TestLocking.swift in Sources */,
 				D31A0FC81A65D6D000DC8C7E /* SearchSuggestClient.swift in Sources */,
