@@ -6,6 +6,7 @@ import Foundation
 import UIKit
 import Shared
 import SwiftKeychainWrapper
+import LocalAuthentication
 
 private let ImmediatelyInSeconds: Int32 = 0
 private let OneMinuteInSeconds: Int32 = 1 * 60
@@ -158,18 +159,28 @@ class AuthenticationSettingsViewController: SettingsTableViewController {
         ])
 
         let prefs = profile.prefs
-        let requirePasscodeSection = SettingSection(title: nil, children: [
-            RequirePasscodeSetting(settings: self),
-            BoolSetting(prefs: prefs,
-                prefKey: "touchid.logins",
-                defaultValue: false,
-                titleText: NSLocalizedString("Use Touch ID", tableName:  "AuthenticationManager", comment: "List section title for when to use Touch ID")
-            ),
-        ])
-
+        let requirePasscodeSection: SettingSection?
+        
+        let localAuthenticationContext = LAContext()
+        if localAuthenticationContext.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: nil) {
+            requirePasscodeSection = SettingSection(title: nil, children: [
+                RequirePasscodeSetting(settings: self),
+                BoolSetting(prefs: prefs,
+                    prefKey: "touchid.logins",
+                    defaultValue: false,
+                    titleText: NSLocalizedString("Use Touch ID", tableName:  "AuthenticationManager", comment: "List section title for when to use Touch ID")
+                ),
+                ])
+        }
+        else {
+            requirePasscodeSection = SettingSection(title: nil, children: [
+                RequirePasscodeSetting(settings: self),
+            ])
+        }
+        
         settings += [
             passcodeSection,
-            requirePasscodeSection,
+            requirePasscodeSection!,
         ]
 
         return settings
